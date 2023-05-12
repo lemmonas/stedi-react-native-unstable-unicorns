@@ -2,12 +2,26 @@ import React from 'react';
 import {StyleSheet, View, Text, Button} from 'react-native';
 
 export default function Login(props){
+    const function Login(props){
+        const [currentUser, setCurrentUser] = useState(null);
+        const handleUserClick = (user) => {
+            set CurrentUser(user)
+        }
+    }
+
     return(
         <View style={styles.login}>
             <Text>This is the Login Screen</Text>
-            <Button title="Log In" onPress={()=>props.setUserLoggedIn(true)}></Button>
+            {props.users.map((user) => (
+                <Button
+                key={user.id}
+                title={'Hello {$user.name}'}
+                />
+            ))}
+            {currentUser && (
+                <Text> Hello {currentUser.name} </Text>
+            )}
         </View>
-
     );
 }
 
@@ -25,3 +39,6 @@ const styles = StyleSheet.create({
         
       },
 })
+const users = [
+    {id: 1, name: 'Micah'},
+];
