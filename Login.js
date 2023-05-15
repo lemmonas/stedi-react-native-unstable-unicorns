@@ -2,10 +2,10 @@ import React from 'react';
 import {StyleSheet, View, Text, Button} from 'react-native';
 
 export default function Login(props){
-    const function Login(props){
+    const Login(props){
         const [currentUser, setCurrentUser] = useState(null);
         const handleUserClick = (user) => {
-            set CurrentUser(user)
+            setCurrentUser(user)
         }
     }
 
